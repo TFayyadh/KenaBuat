@@ -582,8 +582,21 @@ video {
   margin-bottom: 25vh;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .ml-7{
   margin-left: 1.75rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
+}
+
+.mr-8{
+  margin-right: 2rem;
 }
 
 .flex{
@@ -644,6 +657,31 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-green-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+.bg-green-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 .bg-contain{
@@ -708,11 +746,6 @@ video {
 .before\:bg-uncheck::before{
   content: var(--tw-content);
   background-image: url('/img/stop_467153.png');
-}
-
-.before\:content-none::before{
-  --tw-content: none;
-  content: var(--tw-content);
 }
 
 .hover\:opacity-90:hover{

@@ -1,7 +1,8 @@
 // let task1 = document.getElementById('list1');
 // let task2 = document.getElementById('list2');
 // let task3 = document.getElementById('list3');   
-const btn = document.querySelector('button');
+const addbtn = document.getElementById('addBtn');
+const clearbtn = document.getElementById('clearBtn');
 const display = document.getElementById('input-box');
 const list = document.getElementById("list");
 
@@ -15,14 +16,24 @@ const list = document.getElementById("list");
     //     task3.style.backgroundImage = "url(./img/checked.png)"
     // })
 
-    btn.addEventListener('click', (e) =>{
+    addbtn.addEventListener('click', (e) =>{
     let li = document.createElement("li");
     li.innerHTML = display.value;
     // li.appendChild(document.createTextNode(display.value));
     list.appendChild(li); 
     display.value = "";
     saveData();
-    })
+    });
+
+clearbtn.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.parentElement.remove();
+        
+    }
+    clearTask();
+});
+
+    
     
 function saveData(){
     localStorage.setItem("data", list.innerHTML);
@@ -30,6 +41,11 @@ function saveData(){
 
 function showTask(){
     list.innerHTML = localStorage.getItem("data");
+}
+
+function clearTask(){
+    localStorage.removeItem("data");
+    list.innerHTML = ""
 }
 
 showTask();
