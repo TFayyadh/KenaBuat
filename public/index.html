@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="css/output.css">
 </head>
 <body class="bg-indigo-200">
-  <div class=" bg-white rounded-lg my-[25vh] mx-auto w-[80%] md:w-[50%] h-[50vh] flex flex-col shadow-lg">
-    <div class="logo font-mono font-semibold text-2xl my-6 ml-9">KenaBuat</div>
+  <div class=" bg-white rounded-lg my-[25vh] mx-auto w-[80%] min-h-[40vh] md:w-[50%] flex flex-col shadow-lg">
+    <div class="logo font-mono font-semibold text-2xl my-6 ml-7">KenaBuat</div>
     <div class="input flex ">
       <input class="mx-6 p-4 w-[80%] items-center bg-gray-200 rounded-lg outline-none" type="text" id="input-box" placeholder="Add note here.">
-      <button class="w-[20%] mx-8 rounded-xl bg-orange-300 hover:opacity-90 cursor-pointer">
+      <button onclick="addTask()" class="w-[20%] mx-8 rounded-xl bg-orange-300 hover:opacity-90 cursor-pointer">
         <p class="m-4 text-center font-semibold text-lg">Add</p>
       </button>
     </div>
+
     <div>
-      <ul class="m-8 flex flex-col gap-6 list-container"> 
-        <li style="background-image: url(./img/stop_467153.png);" id="list1" class=" text-xl bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> Task 1</li>
-        <li style="background-image: url(./img/stop_467153.png);" id="list2" class=" text-xl bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> Task 2</li>
-        <li style="background-image: url(./img/stop_467153.png);" id="list3" class=" text-xl bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> Task 3</li>
+      <ul class="mx-8 my-4 flex flex-col gap-4 text-xl" id = "list"> 
+        <li id="list1" class="  before:bg-uncheck bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> </li>
+        <li id="list2" class="  before:bg-uncheck bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> </li>
+        <li id="list3" class="  before:bg-uncheck bg-contain bg-right bg-no-repeat text-indigo-900 cursor-pointer"> </li>
       </ul>
     </div>
+
     <div class="checklist"></div>
   </div>
 
